@@ -6,6 +6,18 @@ server:
 spring:
   application:
     name : customer-service
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://customer-db.cluster-cxuhzmhetcvn.us-east-1.rds.amazonaws.com:3306/customerdb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    username: admin
+#    password: admin123
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      database: mysql
+#      generate-ddl: true
+#      show-sql: true
+
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
@@ -30,3 +42,5 @@ order:
 
 kafka:
   bootstrapAddress: localhost:9092
+#kafka:
+#  bootstrapAddress: b-1.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092,b-2.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092,b-3.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092
